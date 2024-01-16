@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+        }
+        body{
+        min-height: 100vh;
+        background: white;
+        color: white;
+        background-position: center;
+        background-image: url(dashbord.png);
+        background-size: cover;
+        height: 100vh;
+        }
+        .side-bar{
+            background: #1b1a1b;
+            width: 250px;
+            left: -250px;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            overflow-y: auto;
+            transition: all .6s;
+            transition-property: left;
+            height: 90%;
+            margin-top: 1.8cm;
+        }
+        header{
+            background: #33363a ;
+            text-align: center;
+            padding: 0.3cm;
+        }
+        .close-btn{
+            position: absolute;
+            color: #fff;
+            font-size: 23px;
+            right: 0;
+            margin: 15px;
+            cursor: pointer;
+        }
+        header h2{
+            text-align: center;
+            font-weight: 500;
+            font-size: 25px;
+            padding-bottom: 13px;
+            font-family: sans-serif;
+            letter-spacing: 2px;
+            padding-top: 13px;
+        }
+        .menu{
+            width: 100%;
+        }
+        .menu .item{
+            position: relative;
+            cursor: pointer;
+        }
+        .menu .item a{
+            color: #fff;
+            font-size: 16px;
+            text-decoration: none;
+            display: block;
+            padding: 5px 30px;
+            line-height: 60px;
+        }
+        .item i{
+            margin-right: 15px;
+        }
+        .item a .dropdown{
+            position: absolute;
+            right: 0;
+            margin: 20px;
+            transition: 0.3s ease;
+        }
+        .item .sub-menu{
+            background: #262627;
+            display: none;
+        }
+
+        .menu-btn{
+            position: absolute;
+            color: white;
+            font-size: 35px;
+            cursor: pointer;
+            margin: 25px;
+            margin-top: 2.1cm;
+            border: 2px solid gray;
+            background-color: #33363a;
+            width: 3%;
+            padding-left: 5px;
+            border-radius: 5px;
+            padding-top: 2px;
+        }
+        .side-bar.active{
+            left: 0;
+        }
+        .side-bar::-webkit-scrollbar{
+            width: 0px;
+        }
+        .item .sub-menu a{
+            padding-left: 80px;
+        }
+        .rotate{
+            transform: rotate(90deg);
+        }
+        .container{
+            padding:15px 9%;
+            padding-top: 80px;
+        }
+        
+        .container .heading{
+            text-align: center;
+            color:#fff;
+            text-shadow: 0 3px 7px rgba(0,0,0,.2);
+            font-size: 35px;
+        }
+        
+        .container .box-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap:5px;
+            padding: 0 85px;
+            margin-left: 18px;
+        }
+        
+        .container .box-container .box{
+            box-shadow: 0 5px 10px rgba(0,0,0,.2);
+            border-radius: 5px;
+            background: #fff;
+            text-align: center;
+            padding:15px 20px;
+            margin: 0 10px 5px 10px;
+        }
+        
+        .container .box-container .box img{
+            height: 80px;
+        }
+        
+        .container .box-container .box h3{
+            color:#444;
+            font-size: 22px;
+            padding:10px 0;
+        }
+        
+        .container .box-container .box p{
+            color:#777;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+        
+        .container .box-container .box .btn{
+            margin-top: 10px;
+            display: inline-block;
+            background:#333;
+            color:#fff;
+            font-size: 17px;
+            border-radius: 5px;
+            padding: 8px 25px;
+        }
+        
+        .container .box-container .box .btn:hover{
+            letter-spacing: 1px;
+        }
+        
+        .container .box-container .box:hover{
+            box-shadow: 0 10px 15px rgba(0,0,0,.3);
+            transform: scale(1.03);
+        }
+        
+        @media (max-width:768px){
+            .body{
+                padding:20px;
+            }
+        }
+            
+        #tombolKembali {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            background-color: rgb(236, 221, 12) ;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            margin-right: 1.5cm;
+            margin-top: 0.1cm;
+            color: black;
+            border: 5px;
+            border-color: solid black;
+        }
+
+        #tombolKembali:hover {
+            background-color: rgb(163, 129, 16);
+            color: antiquewhite;
+        }
+
+    </style>
+</head>
+<body>
+    <a id="tombolKembali" onclick="tombolKembali()">Kembali</a>
+    <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+    </div>
+
+<div class="side-bar">
+    <header>
+        <div class="close-btn">
+            <i class="fas fa-times"></i>
+        </div>
+        <H2 style="font-size: 20px; font-weight: bold;">Mata Pelajaran</H2>
+    </header>
+
+    <div class="menu">
+        <div class="item"><a href="#"><i class="fas fa-desktop"></i>Dashboard</a></div>
+        <div class="item"><a class="sub-btn"><i class="fas fa-table"></i>IPA
+            <i class="fas fa-angle-right dropdown"></i>
+        </a>
+        <div class="sub-menu">
+            <a href="ipa.html" class="sub-item">Replikasi Virus</a>
+        </div>
+        </div>
+
+        <div class="item"><a class="sub-btn"><i class="fas fa-table"></i>Bahasa Jepang
+                <i class="fas fa-angle-right dropdown"></i>
+            </a>
+            <div class="sub-menu">
+                <a href="HajimemashitedanPerkenalanDiriBahasaJepang.html" class="sub-item">Perkenalan Diri</a>
+                <a href="partikel_wa.html" class="sub-item">Partikel WA / は</a>
+            </div>
+                        
+
+        </div>
+
+        <div class="item"><a class="sub-btn"><i class="fas fa-table"></i>Prakarya
+                <i class="fas fa-angle-right dropdown"></i>
+            </a>
+            <div class="sub-menu">
+                <a href="Budidaya_ikan_cupang.html" class="sub-item">Cara Beternak Ikan Cupang</a>
+            </div>
+        </div>
+
+        <div class="item"><a class="sub-btn"><i class="fas fa-table"></i>IPS
+            <i class="fas fa-angle-right dropdown"></i>
+            </a>
+            <div class="sub-menu">
+                <a href="IPS.html" class="sub-item">Sosial Masyarakat</a>
+            </div>
+        </div>
+
+        <div class="item"><a class="sub-btn"><i class="fas fa-table"></i>Bahasa Indonesia
+            <i class="fas fa-angle-right dropdown"></i>
+            </a>
+            <div class="sub-menu">
+                <a href="b.indonesia.html" class="sub-item">Cerita Pendek</a>
+            </div>
+        </div>
+
+        <div class="item"><a class="sub-btn"><i class="fas fa-table"></i>PKN
+            <i class="fas fa-angle-right dropdown"></i>
+            </a>
+            <div class="sub-menu">
+                <a href="pkn.html" class="sub-item">Keberagaman Suku</a>
+            </div>
+        </div>
+
+        <div class="item"><a class="sub-btn"><i class="fas fa-table"></i>PAI
+            <i class="fas fa-angle-right dropdown"></i>
+            </a>
+            <div class="sub-menu">
+                <a href="agama.html" class="sub-item">Rukun Iman</a>
+            </div>
+        </div>
+    </div>    
+</div>
+
+<div class="container">
+
+<h1 class="heading">REKOMENDASI</h1>
+
+<div class="box-container">
+
+    <div class="box">
+        <img src="beragamSuku.jpg" alt="">
+        <h3>PPKn</h3>
+        <p>Keberagaman Suku</p>
+        <a href="pkn.html" class="btn">read more</a>
+    </div>
+
+    <div class="box">
+        <img src="teksNarasi.jpg" alt="">
+        <h3>Bahasa Indonesia</h3>
+        <p>Teks Narasi Cerpen</p>
+        <a href="b.indonesia.html" class="btn">read more</a>
+    </div>
+
+    <div class="box">
+        <img src="badminton.webp" alt="">
+        <h3>PJOK</h3>
+        <p>Cara bermain badminton yang benar</p>
+        <a href="#" class="btn">read more</a>
+    </div>
+
+    <div class="box">
+        <img src="rukunIman.jpeg" alt="">
+        <h3>PAI</h3>
+        <p>Pembelajaran Rukun Iman</p>
+        <a href="agama.html" class="btn">read more</a>
+    </div>
+
+    <div class="box">
+        <img src="Sosial.jpg" alt="">
+        <h3>IPS</h3>
+        <p>Cara Hidup Bersosial</p>
+        <a href="IPS.html" class="btn">read more</a>
+    </div>
+
+    <div class="box">
+        <img src="cyberSecurity.jpg" alt="">
+        <h3>Informatika</h3>
+        <p>Apa Itu Cybersecurity</p>
+        <a href="#" class="btn">read more</a>
+    </div>
+
+</div>
+
+</div>
+
+
+
+
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+   <script>
+    $(document).ready(function(){
+        $('.menu-btn').click(function(){
+            $('.side-bar').addClass('active');
+            $('.menu-btn').css("visibility","hidden");
+        });
+
+        $('.close-btn').click(function(){
+            $('.side-bar').removeClass('active');
+            $('.menu-btn').css("visibility","visible");
+        });
+
+        $('.sub-btn').click(function(){
+            $(this).next('.sub-menu').slideToggle();
+            $(this).find('.dropdown').toggleClass('rotate');
+        });
+
+    })
+    function tombolKembali() {
+            window.location.href = 'login.html';
+        }
+   </script>
+</body>
+</html>

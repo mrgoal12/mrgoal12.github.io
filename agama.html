@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agama</title>
+    <style>
+       
+        
+       body,
+        h1,
+        p,
+        button {
+            margin: 0;
+            padding: 0;
+            
+        }
+        
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        
+        header {
+            background-color: #508D69;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        article {
+            margin-bottom: 30px;
+            background-color: #beecba;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        article p {
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        
+        .back-button {
+            padding: 10px 20px;
+            background-color: #A6CF98;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 999;
+            transition: background-color 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #555;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #508D69;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .course {
+           text-align: justify;
+            max-width: 600px;
+            border-radius: 90px;
+            padding: 20px;
+            margin-left: 90px;
+            
+        }
+        .video-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+        .description {
+            margin-top: 100px;
+            text-align: justify;
+            font-size: 16px;
+           
+        }
+        .course .thumbnail img {
+            width: 600px;
+            height: auto;
+        }
+        .continue-button {
+            display: block;
+            width: 150px;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .continue-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="goBack()" class="back-button">Kembali</button>
+    <header>
+        <h1>RUKUN IMAN</h1>
+    </header>
+
+    <main>
+        <article>
+            <div class="course">
+                <div class="video-wrapper">
+                    <a href="https://youtu.be/COrUNvdQwuI?si=3rWyonuPvmz9TE6j" class="thumbnail">
+                        <img src="iman.jpeg" alt="Custom Thumbnail">
+                        <span class="overlay"></span>
+                    </a>
+                </div>
+                <div class="description">
+                   <p>Rukun Iman merupakan prinsip-prinsip dasar yang menjadi landasan keyakinan dalam agama Islam. Terdapat enam rukun iman yang merupakan inti dari keyakinan seorang Muslim terhadap ajaran Islam. Rukun Iman ini menunjukkan keyakinan atas hal-hal yang esensial dalam kepercayaan Islam. Berikut adalah penjelasan singkat mengenai setiap rukun iman:</p>
+                   <p>1. Iman kepada Allah (Tauhid): Rukun pertama adalah keyakinan kepada keesaan Allah (Tauhid). Ini mencakup keyakinan bahwa Allah adalah satu-satunya Tuhan yang tidak memiliki sekutu atau mitra, pencipta alam semesta, pemberi kehidupan, serta kekuasaan yang mengatur segalanya.</p>
+                   <p>2. Iman kepada Malaikat: Muslim meyakini keberadaan malaikat yang diciptakan oleh Allah. Mereka beribadah kepada-Nya, menjalankan perintah-Nya, dan memiliki peran dalam menjalankan kehendak Allah di alam semesta.</p>
+                   <p>3. Iman kepada Kitab Allah: Ini mencakup keyakinan terhadap kitab-kitab suci yang diturunkan kepada para nabi sebagai pedoman hidup manusia, termasuk di antaranya Al-Qur'an yang dianggap sebagai kitab terakhir dan sempurna yang berisi petunjuk bagi manusia.</p>
+                   <p>4. Iman kepada Rasul-rasul Allah: Keyakinan kepada para rasul yang Allah utus sebagai pembawa ajaran-ajaran-Nya kepada umat manusia. Dari Adam hingga Nabi Muhammad, Muslim meyakini bahwa para rasul membawa wahyu Allah untuk membimbing manusia.</p>
+                   <p>5. Iman kepada Hari Kiamat: Merupakan keyakinan bahwa suatu saat nanti akan terjadi hari kebangkitan di mana semua manusia akan dihidupkan kembali untuk mempertanggungjawabkan perbuatan mereka di dunia, dan menerima balasan sesuai dengan amalannya.</p>
+                   <p>6. Iman kepada Qada dan Qadar: Ini adalah keyakinan bahwa segala sesuatu, baik yang baik maupun yang buruk, terjadi dengan izin Allah. Manusia diberikan kebebasan untuk memilih, namun segala yang terjadi sudah ditentukan oleh ketetapan dan kehendak-Nya.</p>
+                   <p>Rukun Iman ini merupakan dasar dalam keyakinan seorang Muslim dan menjadi panduan utama dalam menjalani kehidupan sesuai dengan ajaran Islam. Kepercayaan pada keenam rukun iman tersebut merupakan hal yang fundamental dalam keyakinan umat Islam.</p>
+                
+               </div>
+            </div>
+            <button onclick="goToNext()" class="continue-button">Latihan soal</button>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Website Artikel</p>
+    </footer>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+        function goBack() {
+            window.history.back();
+        }
+
+        function goToNext() {
+            // Ganti URL dengan tujuan halaman berikutnya jika ada
+            // Misal: window.location.href = "halaman-berikutnya.html";
+            window.location.href = "https://forms.gle/DnSKtjhnE2zGcLXF7";
+            alert("Anda akan menuju halaman berikutnya");
+        }
+    </script>
+</body>
+
+</html>

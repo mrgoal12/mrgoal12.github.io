@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f4f4f4;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          align-items: center;
+          justify-content: right;
+          height: 100vh;
+          background-image: url('login2.png');
+          background-size: contain ;
+          margin-right: 7cm;
+        }
+        input {
+            padding: 10px;
+            margin: 5px;
+        }
+        form{
+          background-image: url(iphone6s-750x1334-wallpaper_00922.jpg);
+          padding: 30px;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          height: 8cm;
+          color: rgb(9, 77, 6);
+          border-color: #45a049;
+          border: 10px;
+          width: 6cm;
+          justify-content: center;
+          align-items: center;
+        }
+        input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+        border-radius: 5px;
+        }
+        #atasform{
+          background-color: rgb(12, 77, 12);
+          color: rgba(180, 219, 6, 0.87);
+          width: 6cm;
+          font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+          border: 5px;
+          border-color: solid black;
+          border-radius: 5px;
+          justify-content: center;
+          align-items: center;
+          height: 1cm;
+          display: flex;
+        }
+        input:hover {
+            background-color: rgb(207, 236, 222);
+            color: rgb(14, 9, 3);
+        }
+        button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: rgb(236, 221, 12) ;
+            width: 2cm;
+            height: 1cm;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            float: right;
+            padding: auto;
+            border-radius: 5px;
+            margin-top: 0.02cm;
+            width: 2cm;
+            height: 1cm;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 1.2cm;
+        }
+        button:hover {
+            background-color: rgb(163, 129, 16);
+            color: antiquewhite;
+        }
+        
+        #tombolKembali {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            background-color: rgb(236, 221, 12) ;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            margin-right: 1.5cm;
+            margin-top: 0.1cm;
+            color: black;
+            border: 5px;
+            border-color: solid black;
+        }
+
+        #tombolKembali:hover {
+            background-color: rgb(163, 129, 16);
+            color: antiquewhite;
+        }
+        #lupapsw {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            background-color: rgb(236, 221, 12) ;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            margin-right: 4cm;
+            margin-top: 0.1cm;
+            color: black;
+            border: 5px;
+            border-color: solid black;
+            
+        }
+
+        #lupapsw:hover {
+            background-color: rgb(163, 129, 16);
+            color: antiquewhite;
+        }
+      </style>
+      
+</head>
+    
+<body>
+<a id="tombolKembali" onclick="tombolKembali()">Kembali</a>
+<a id="lupapsw" onclick="lupapsw()">Lupa Password</a>
+
+<form onsubmit="validateForm(); return false;">
+    <div id="atasform" >
+        <h2 >L O G I N</h2>
+    </div>
+    <br>
+    <br>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br>
+
+    <center><input style="width: 3cm; height: auto;  font-size: 15px;" type="submit" value="Login"></center>
+    
+</form>
+
+<script>
+    function validateForm() {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+    
+        var allowedUsers = {
+            'RIFAI': '123456',
+            'AKMAL': '123456',
+            'AGUNG': '123456',
+            'RIFQI': '123456',
+            'BAIHAQI': '123456'
+        };
+
+
+        if (allowedUsers[username] && allowedUsers[username] === password) {
+            alert('Login Berhasil!');
+            window.location.href = 'Home.html';
+        } else {
+            alert('Maaf, Sandi atau Username anda salah.');
+        }
+        
+    }
+    function tombolKembali() {
+            window.location.href = 'cover.html';
+        }
+    function lupapsw() {
+            window.location.href = 'lupa password.html';
+        }
+</script>
+
+</body>
+</html>

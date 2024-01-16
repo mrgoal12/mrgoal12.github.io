@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPS</title>
+    <style>
+       
+        
+       body,
+        h1,
+        p,
+        button {
+            margin: 0;
+            padding: 0;
+            
+        }
+        
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        
+        header {
+            background-color: #508D69;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        article {
+            margin-bottom: 30px;
+            background-color: #beecba;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        article p {
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        
+        .back-button {
+            padding: 10px 20px;
+            background-color: #A6CF98;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 999;
+            transition: background-color 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #555;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #508D69;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .course {
+           text-align: justify;
+            max-width: 600px;
+            border-radius: 90px;
+            padding: 20px;
+            margin-left: 90px;
+            
+        }
+        .video-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+        .description {
+            margin-top: 100px;
+            text-align: justify;
+            font-size: 16px;
+           
+        }
+        .course .thumbnail img {
+            width: 600px;
+            height: auto;
+        }
+
+        .continue-button {
+            display: block;
+            width: 150px;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .continue-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="goBack()" class="back-button">Kembali</button>
+    <header>
+        <h1>SOSIAL MASYARAKAT</h1>
+    </header>
+
+    <main>
+        <article>
+            <div class="course">
+                <div class="video-wrapper">
+                    <a href="https://youtu.be/ushsEHIzvTY?si=31YwrfribCTOL-56" class="thumbnail">
+                        <img src="masyarakat.jpeg" alt="Custom Thumbnail">
+                        <span class="overlay"></span>
+                    </a>
+                </div>
+                <div class="description">
+                    <p>Sosial masyarakat adalah studi tentang interaksi dan hubungan antarindividu dalam suatu masyarakat. Ini melibatkan pemahaman mengenai bagaimana individu-individu dalam komunitas berinteraksi, saling memengaruhi, dan membentuk norma, nilai, serta struktur sosial yang ada.</p>
+                    <p>Materi sosial masyarakat membahas struktur sosial, norma, nilai, interaksi sosial, perubahan sosial, konflik sosial, dan berbagai aspek yang mempengaruhi dinamika sosial dalam masyarakat.</p>
+                    <P>Konsep sosial masyarakat juga mengacu pada interaksi antara individu dalam suatu masyarakat atau kelompok. Ini melibatkan cara individu berinteraksi, berbagi nilai, norma, dan perilaku yang memengaruhi hubungan mereka dengan orang lain dalam komunitas tersebut. Ini mencakup banyak hal, mulai dari komunikasi, kerja sama, solidaritas, hingga memperhatikan kebutuhan orang lain di sekitar kita. </P>
+               
+                </div>
+            </div>
+            <button onclick="goToNext()" class="continue-button">Latihan soal</button>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Website Artikel</p>
+    </footer>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+        function goBack() {
+            window.history.back();
+        }
+
+        function goToNext() {
+            // Ganti URL dengan tujuan halaman berikutnya jika ada
+            // Misal: window.location.href = "halaman-berikutnya.html";
+            window.location.href = "https://forms.gle/uh4bg4tcb1PHXrsr7";
+            alert("Anda akan menuju halaman berikutnya");
+        }
+    </script>
+</body>
+
+</html>

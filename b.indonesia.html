@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B.Indonesia</title>
+    <style>
+       
+       
+        body,
+        h1,
+        p,
+        button {
+            margin: 0;
+            padding: 0;
+            
+        }
+        
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        
+        header {
+            background-color: #508D69;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        article {
+            margin-bottom: 30px;
+            background-color: #beecba;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        article p {
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        
+        .back-button {
+            padding: 10px 20px;
+            background-color: #A6CF98;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 999;
+            transition: background-color 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #555;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #508D69;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .course {
+           text-align: justify;
+            max-width: 600px;
+            border-radius: 90px;
+            padding: 20px;
+            margin-left: 90px;
+            
+        }
+        .video-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+        .description {
+            margin-top: 100px;
+            text-align: justify;
+            font-size: 16px;
+           
+        }
+        .course .thumbnail img {
+            width: 600px;
+            height: auto;
+        }
+
+        .continue-button {
+            display: block;
+            width: 150px;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .continue-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="goBack()" class="back-button">Kembali</button>
+    <header>
+        <h1>CERITA PENDEK</h1>
+    </header>
+
+    <main>
+        <article>
+            <div class="course">
+                <div class="video-wrapper">
+                    <a href="https://youtu.be/9JFg8gF1JRM?si=rschEUWT1agaYbRl" class="thumbnail">
+                        <img src="cerpen.jpeg" alt="Custom Thumbnail">
+                        <span class="overlay"></span>
+                    </a>
+                </div>
+                <div class="description">
+                    <p>Cerita pendek, atau cerpen, adalah bentuk naratif yang merangkum cerita dalam skala yang lebih kecil daripada novel. Biasanya, cerpen fokus pada satu peristiwa atau konflik utama dengan jumlah karakter yang lebih terbatas. Meskipun lebih singkat, cerpen tetap mengandung elemen-elemen penting seperti karakter, plot, setting, dan tema yang mendalam.</p>
+                    <p>Struktur Cerpen yang pertama
+                        Pengenalan Elemen ini memperkenalkan latar belakang cerita, karakter, dan setting. Lalu akan ada
+                        Konflik Inilah inti cerita di mana konflik muncul, menciptakan ketegangan atau masalah yang perlu diselesaikan. Dan yang terakhir
+                        Klimaks Puncak dari konflik, di mana ketegangan mencapai titik tertinggi dan keputusan penting dibuat oleh karakter.
+                        Penyelesaian (Resolution): Bagian di mana konflik dipecahkan atau disimpulkan, memberikan pemahaman atau pesan kepada pembaca.
+                       </p>
+                       <p> Unsur Cerpen yang ada di dalamnya antara lain
+                        Karakter, Meskipun jumlah karakter terbatas, mereka harus memiliki kedalaman dan kompleksitas untuk memancing ketertarikan pembaca.
+                        Plot Alur cerita harus terstruktur dengan baik, dengan awal, tengah, dan akhir yang jelas.
+                        SettingLingkungan tempat cerita berlangsung harus digambarkan dengan detail untuk membantu pembaca memahami konteks cerita.
+                        Gaya Bahasa Penggunaan bahasa yang efektif untuk menggambarkan suasana, emosi, dan nuansa cerita. Setelah
+                        Tema Cerpen sering kali menyampaikan pesan atau tema tertentu kepada pembaca.</p>
+                     
+                </div>
+            </div>
+            <button onclick="goToNext()" class="continue-button">Latihan soal</button>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Website Artikel</p>
+    </footer>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+        function goBack() {
+            window.history.back();
+        }
+
+        function goToNext() {
+            // Ganti URL dengan tujuan halaman berikutnya jika ada
+            // Misal: window.location.href = "halaman-berikutnya.html";
+            window.location.href = "https://forms.gle/Kj4ZDSNBV1VpJjqz5";
+            alert("Anda akan menuju halaman berikutnya");
+        }
+    </script>
+</body>
+
+</html>
